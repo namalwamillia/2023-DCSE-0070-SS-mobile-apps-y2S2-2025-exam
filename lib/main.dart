@@ -1,30 +1,59 @@
-import 'package:exam_movie_app/screens/MockupScreenOne.dart';
-// ignore: unused_import
-import 'package:exam_movie_app/screens/MockupScreenTwo.dart';
+
+// import 'package:flutter/material.dart';
+// // ignore: unused_import
+// import 'screens/MockupScreenOne.dart';
+// // ignore: unused_import
+// import 'screens/MockupScreenTwo.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'TMDB Movies App',
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//         visualDensity: VisualDensity.adaptivePlatformDensity,
+//       ),
+//          home: const MockupScreenTwo(),
+//         //  home: const MockupScreenOne(),
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
+// ignore: unused_import
+import 'screens/MockupScreenOne.dart';
+// ignore: unused_import
+import 'screens/MockupScreenTwo.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Exams_move_app',
+      title: 'TMDB Movies App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
-
-       
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 155, 221, 237)),
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Mockupscreenone(),
-      // home: const Mockupscreentwo(),
+      initialRoute: '/screen_two', // Start with MockupScreenTwo
+      routes: {
+        '/screen_one': (context) => const MockupScreenOne(), // Route for MockupScreenOne
+        '/screen_two': (context) => const MockupScreenTwo(), // Route for MockupScreenTwo
+      },
     );
   }
 }
-
-
